@@ -31,23 +31,33 @@ footer, header, hgroup, menu, nav, section {
     max-width:100%;
     /* border:1px solid grey; */
 }
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+}
+h1{
+    font-size: 4rem;
+}
+header, section{
+    padding:4%,0;
+}
 nav{
     display:flex;
     justify-content: space-between;
 }
 .topsection {
-    display: flex;
-    justify-content: center;
-}
-.image-button {
     background-image: url(https://picsum.photos/600/400);
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: white;
-    font-size:large;
-    width: 600px;
-    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    text-align: center;
 }
+
 footer {
     background-color: lightgrey;
     padding: 20px;
@@ -56,8 +66,12 @@ footer {
 .row {
     display: flex;
     flex-direction: row;
-    justify-content:space-evenly;
-    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.row div{
+    width: 30%;
+    margin: 2%, 0;
 }
 .portfolio-element {
     text-align: center;
@@ -78,78 +92,54 @@ button a {
     color: inherit;
 } 
 @media (max-width: 800px){
-    header {
-        text-align:center;
-    }
-
-    header nav {
+    nav {
         display: flex;
         flex-direction: column;
-    }
-
-    header nav button{
-        width: 25%;
-        align-self: center;
-    }
-
-    .topsection {
+        align-items: center;
+        width: 100%;
+        }
+    .links{
         display: flex;
         flex-direction: column;
-    }
-    .topsection .description {
-        display: flex;
-        flex-direction: column;
-        align-self: center;
-        text-align: center;
-    }
-
-    .row {
-        flex-wrap: wrap;
-    }
-
-    .row .portfolio-element {
-        width: 45%;
-        height: 45%;
-
-    }
-
+        align-items: center;
+        width: 100%; 
+        }
+    .links button{
+        width: 50%;
+        margin: 2%, 0;
+       }
+    .topsection{
+        width: 90%;
+        margin: 0 auto;
+        } 
+    .row div{
+        width: 50%;
+    } 
 
 }
 
 @media (max-width: 500px){
-    header {
-        text-align:center;
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     }
-
-    header nav {
-        display: flex;
-        flex-direction: column;
+.links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; 
     }
-
-    header nav button{
-        width: 25%;
-        align-self: center;
-    }
-
-    .topsection {
-        display: flex;
-        flex-direction: column;
-    }
-    .topsection .description {
-        display: flex;
-        flex-direction: column;
-        align-self: center;
-        text-align: center;
-    }
-
-    .row {
-        flex-wrap: wrap;
-    }
-
-    .row .portfolio-element {
-        width: 45%;
-        height: 45%;
-
-    }
-
+.links button{
+    width: 40%;
+    margin: 1%, 0;
+   }
+.topsection{
+    width: 80%;
+    margin: 0 auto;
+    } 
+.row div{
+    width: 40%;
+}
 } 
